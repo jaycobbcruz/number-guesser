@@ -12,7 +12,7 @@ java -jar number-guesser.jar {expression} {result}
 java -jar number-guesser.jar 'function(x) x * x' 9
 ```
 
-The example will return 3. The function is computes the square of a given variable, thus the problem tries to solve the square root of 9.
+The example will return 3. The function computes the square of a given variable, thus the problem tries to solve the square root of 9.
 
 ## Requirements
 This application works only with JDK 8. The only dependency is JUnit 4.12.
