@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 class StringToFunctionConverter {
 
-    private static final ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
+    private static final ScriptEngine engine = new ScriptEngineManager().getEngineByName("JavaScript");
 
     /**
      * Convert a script/function in String to a java.util.function.Function

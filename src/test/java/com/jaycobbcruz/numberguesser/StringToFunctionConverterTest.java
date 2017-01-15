@@ -9,10 +9,10 @@ public class StringToFunctionConverterTest {
 
     @Test
     public void testGuess() {
-        final Function<Object, Object> square = StringToFunctionConverter.convert("function(d) d * d");
-        Assert.assertEquals((double) 81, square.apply(9));
+        final Function<Double, Double> square = StringToFunctionConverter.convert("function(d) d * d");
+        Assert.assertEquals(Double.valueOf(81), square.apply(Double.valueOf(9)));
 
-        final Function<Object, Object> function = StringToFunctionConverter.convert("function(d) 1 + 2 + 3 + d");
-        Assert.assertEquals((double) 10, function.apply(4));
+        final Function<Double, Double> function = StringToFunctionConverter.convert("function(d) 1 + 2 + 3 + d");
+        Assert.assertEquals(Double.valueOf(10), function.apply(Double.valueOf(4)));
     }
 }
