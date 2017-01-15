@@ -1,6 +1,7 @@
 package com.jaycobbcruz.numberguesser;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 class GuessingAlgorithm {
 
@@ -9,9 +10,13 @@ class GuessingAlgorithm {
     private final Function<Double, Double> function;
     private final Double expectedResult;
 
-    public GuessingAlgorithm(final Function<Double, Double> function, final Double expectedResult) {
-        this.function = function;
-        this.expectedResult = expectedResult;
+    public GuessingAlgorithm(final String function1String, final String function2String) {
+        this(StringToFunctionConverter.convertToFunction(function1String), StringToFunctionConverter.convertToSupplier(function2String));
+    }
+
+    public GuessingAlgorithm(final Function<Double, Double> function1, final Supplier<Number> function2) {
+        this.function = function1;
+        this.expectedResult = function2.get().doubleValue();
     }
 
     public Double guess() {
@@ -29,6 +34,8 @@ class GuessingAlgorithm {
                 } else if (result < expectedResult) {
                     low = guess;
                     guess = guess * 2;
+                } else if ((result % expectedResult) == 0) {
+                    return result / expectedResult;
                 } else {
                     return findNumber(function, 0, expectedResult, low, low);
                 }
@@ -44,7 +51,8 @@ class GuessingAlgorithm {
         return guess;
     }
 
-    private Double findNumber(final Function<Double, Double> function, final int maxLoopCounter, final Double expected, final Double guess, final Double offset) {
+    private Double findNumber(final Function<Double, Double> function, final int maxLoopCounter, final Double expected,
+                              final Double guess, final Double offset) {
 
         if (maxLoopCounter > MAX_LOOP) {
             throw new RuntimeException("Reached max loop count.");
