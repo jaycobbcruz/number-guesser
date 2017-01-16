@@ -10,13 +10,13 @@ class GuessingAlgorithm {
     private final Function<Double, Double> function;
     private final Double expectedResult;
 
-    public GuessingAlgorithm(final String function1String, final String function2String) {
-        this(StringToFunctionConverter.convertToFunction(function1String), StringToFunctionConverter.convertToSupplier(function2String));
+    public GuessingAlgorithm(final String formulaFunction, final String resultFunction) {
+        this(StringToFunctionConverter.convertToFunction(formulaFunction), StringToFunctionConverter.convertToSupplier(resultFunction));
     }
 
-    public GuessingAlgorithm(final Function<Double, Double> function1, final Supplier<Number> function2) {
-        this.function = function1;
-        this.expectedResult = function2.get().doubleValue();
+    public GuessingAlgorithm(final Function<Double, Double> formulaFunction, final Supplier<Number> resultFunction) {
+        this.function = formulaFunction;
+        this.expectedResult = resultFunction.get().doubleValue();
     }
 
     public Double guess() {
