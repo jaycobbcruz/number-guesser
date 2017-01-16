@@ -32,5 +32,6 @@ Solve for x
 java -jar number-guesser.jar 'function(x) 81 / x' '72 / 8'
 ```
 
+
 ## Requirements
 This application works with Java 8.
