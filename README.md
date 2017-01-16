@@ -27,7 +27,7 @@ java -jar number-guesser.jar 'function(x) (29 * x) / 90' 'Math.ceil( -9 * Math.c
 ```
 
 
-Solve for x
+Solve for x.
 ```{r, engine='bash'}
 java -jar number-guesser.jar 'function(x) 81 / x' '72 / 8'
 ```
