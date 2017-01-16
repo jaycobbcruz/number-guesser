@@ -17,7 +17,7 @@ java -jar number-guesser.jar 'function(x) x * x' 9
 
 Find x in "7x + 4x = 100".
 ```{r, engine='bash'}
-java -jar number-guesser.jar 'function(x) (7x) + (4 * x)' 100
+java -jar number-guesser.jar 'function(x) (7 * x) + (4 * x)' 100
 ```
 
 
@@ -27,7 +27,7 @@ java -jar number-guesser.jar 'function(x) (29 * x) / 90' 'Math.ceil( -9 * Math.c
 ```
 
 
-Solve for x.
+Solve for x in equation "80 / x = 71 / 8"
 ```{r, engine='bash'}
 java -jar number-guesser.jar 'function(x) 81 / x' '72 / 8'
 ```
