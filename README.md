@@ -14,18 +14,22 @@ Compute the square root of 9.
 java -jar number-guesser.jar 'function(x) x * x' 9
 ```
 
+
 Find x in "7x + 4x = 100".
 ```{r, engine='bash'}
 java -jar number-guesser.jar 'function(x) (7x) + (4 * x)' 100
 ```
 
-Find x with expected result from another function
+
+Find x with expected result from another function.
 ```{r, engine='bash'}
-java -jar target/number-guesser.jar 'function(x) (29 * x) / 90' 'Math.ceil( -9 * Math.cos(90))'
+java -jar number-guesser.jar 'function(x) (29 * x) / 90' 'Math.ceil( -9 * Math.cos(90))'
 ```
+
+
 Solve for x
 ```{r, engine='bash'}
-java -jar target/number-guesser.jar 'function(x) 81 / x' '72 / 8'
+java -jar number-guesser.jar 'function(x) 81 / x' '72 / 8'
 ```
 
 ## Requirements
