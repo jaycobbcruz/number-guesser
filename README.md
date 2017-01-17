@@ -1,5 +1,8 @@
 # number-guesser
 
+[![Build Status](https://travis-ci.org/jaycobbcruz/number-guesser.svg?branch=master)](https://travis-ci.org/jaycobbcruz/number-guesser)
+
+
 ***number-guesser*** is a simple runnable application that can calculate a variable value based on the given function and its expected result.
 The calculation is done in reverse by finding the variable value by approximation.
 
