@@ -1,6 +1,6 @@
 # number-guesser
 
-[![Build Status](https://travis-ci.org/jaycobbcruz/number-guesser.svg?branch=master)](https://travis-ci.org/jaycobbcruz/number-guesser)
+[![Build Status](https://travis-ci.org/jaycobbcruz/number-guesser.svg?branch=master)](https://travis-ci.org/jaycobbcruz/number-guesser) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 ***number-guesser*** is a simple runnable application that can calculate a variable value based on the given function and its expected result.
