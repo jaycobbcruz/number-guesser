@@ -35,7 +35,7 @@ class GuessingAlgorithm {
                     low = guess;
                     guess = guess * 2;
                 } else if ((result % expectedResult) == 0) {
-                    return result / expectedResult;
+                    return findNumber(function, 0, expectedResult, result / expectedResult, 0d);
                 } else {
                     return findNumber(function, 0, expectedResult, low, low);
                 }
